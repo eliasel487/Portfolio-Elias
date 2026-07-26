@@ -1,0 +1,116 @@
+.visuels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.visual-item {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.visual-full {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  margin-top: 1rem;
+  display: block;
+}
+
+video.visual-full {
+  width: calc(100% + 8rem);
+  margin-left: -4rem;
+  margin-right: -4rem;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #000;
+  border: none;
+}
+
+.visual-placeholder {
+  font-style: italic;
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .visuels-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── LIGHTBOX ── */
+.visual-item,
+.visual-full {
+  cursor: zoom-in;
+  transition: opacity .2s;
+}
+
+.visual-item:hover,
+.visual-full:hover { opacity: .85; }
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .92);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.lightbox.open { display: flex; }
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  cursor: default;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: .7;
+  transition: opacity .2s;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+/* ── DOWNLOAD BUTTON ── */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  margin-top: 2.5rem;
+  padding: .75rem 1.6rem;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: .85rem;
+  font-family: inherit;
+  letter-spacing: .04em;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+}
+
+.download-btn:hover {
+  background: var(--accent);
+  color: #0d0d0d;
+}

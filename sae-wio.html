@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet WIO — Roll on Coins</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sae-detail.css" />
+  <link rel="icon" href="assets/logo.ico" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">E.E</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="cv.html">À propos</a></li>
+      <li><a href="realisations.html" class="active">Réalisations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="detail-hero">
+    <a href="realisations.html" class="back-link">← Retour aux réalisations</a>
+    <p class="section-label">Projet · Systèmes embarqués</p>
+    <h1>Roll on Coins — WIO Terminal</h1>
+    <p>
+      Jeu interactif sur carte WIO Terminal utilisant l'accéléromètre pour déplacer
+      une balle et ramasser des pièces en un temps imparti.
+    </p>
+    <div class="detail-meta">
+      <div class="meta-item">
+        <label>Contexte</label>
+        <span>Binôme · 2 séances de TP</span>
+      </div>
+      <div class="meta-item">
+        <label>Matériel</label>
+        <span>WIO Terminal (Seeed Studio)</span>
+      </div>
+      <div class="meta-item">
+        <label>Langage</label>
+        <span>Arduino (C++)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-body">
+
+    <h2>Contexte</h2>
+    <p>
+      Ce projet a été réalisé en binôme sur carte WIO Terminal dans le cadre des TP 5 et 6. 
+      L'objectif était de développer un jeu complet exploitant l'accéléromètre intégré 
+      de la carte : en inclinant le terminal, le joueur déplace une boule rouge pour 
+      ramasser des pièces jaunes en moins de 30 secondes.
+    </p>
+
+    <h2>Démo</h2>
+    <video src="assets/wio/wio-demo.mp4" autoplay loop muted playsinline controls class="visual-full"></video>
+
+    <a href="assets/wio/Wio.zip" download class="download-btn">↓ Télécharger les sources (ZIP)</a>
+
+  </div>
+
+  <a href="assets/CV-Elias-El-Mkademi.pdf" download class="cv-fab">↓ CV</a>
+
+  <footer>
+    <span>© 2026 Elias El Mkademi</span>
+    <span><a href="mailto:eelmkademi@gmail.com">eelmkademi@gmail.com</a></span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

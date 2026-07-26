@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAÉ S2.04 — Analyse FIFA 19</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sae-detail.css" />
+  <link rel="icon" href="assets/logo.ico" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">E.E</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="cv.html">À propos</a></li>
+      <li><a href="realisations.html" class="active">Réalisations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="detail-hero">
+    <a href="realisations.html" class="back-link">← Retour aux réalisations</a>
+    <p class="section-label">SAÉ S2.04 · Base de données</p>
+    <h1>Analyse des footballeurs FIFA 19</h1>
+    <p>
+      Exploitation complète d'un jeu de données réel — de la modélisation relationnelle
+      jusqu'aux visualisations statistiques présentées à l'oral en anglais.
+    </p>
+    <div class="detail-meta">
+      <div class="meta-item">
+        <label>Contexte</label>
+        <span>Groupe de 3 — S2 2025-2026</span>
+      </div>
+      <div class="meta-item">
+        <label>Technologies</label>
+        <span>Python · PostgreSQL · Pandas · Matplotlib</span>
+      </div>
+      <div class="meta-item">
+        <label>Données</label>
+        <span>~17 000 footballeurs professionnels</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-body">
+
+    <h2>Contexte</h2>
+    <p>
+      Dans le cadre de la SAÉ S2.04, notre groupe (Téo Blanchet, Yanis Lounis et moi-même) 
+      a choisi un jeu de données Kaggle regroupant les informations détaillées de près de 
+      17 000 footballeurs professionnels issus du jeu FIFA 19. L'objectif était de construire 
+      une base de données structurée et d'en extraire des analyses pertinentes, présentées 
+      à l'oral en anglais dans le rôle d'analystes pour un staff technique.
+    </p>
+
+    <h2>Visuels</h2>
+    <div class="visuels-grid">
+      <img src="assets/bdd/unnamed.png"   alt="Visualisation FIFA 19" class="visual-item" />
+      <img src="assets/bdd/unnamed-2.png" alt="Visualisation FIFA 19" class="visual-item" />
+      <img src="assets/bdd/3.png"         alt="Visualisation FIFA 19" class="visual-item" />
+      <img src="assets/bdd/4.png"         alt="Visualisation FIFA 19" class="visual-item" />
+    </div>
+
+    <a href="assets/bdd/Fifa19.zip" download class="download-btn">↓ Télécharger les sources (ZIP)</a>
+
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">×</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+  </div>
+
+  <a href="assets/CV-Elias-El-Mkademi.pdf" download class="cv-fab">↓ CV</a>
+
+  <footer>
+    <span>© 2026 Elias El Mkademi</span>
+    <span><a href="mailto:eelmkademi@gmail.com">eelmkademi@gmail.com</a></span>
+  </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.visual-item, .visual-full').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

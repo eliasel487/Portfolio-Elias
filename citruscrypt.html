@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CitrusCrypt — Trophées NSI 2025</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sae-detail.css" />
+  <link rel="icon" href="assets/logo.ico" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">E.E</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="cv.html">À propos</a></li>
+      <li><a href="realisations.html" class="active">Réalisations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="detail-hero">
+    <a href="realisations.html" class="back-link">← Retour aux réalisations</a>
+    <p class="section-label">Projet personnel · Trophées NSI · 2025</p>
+    <h1>CitrusCrypt</h1>
+    <p>
+      Application de stéganographie et de chiffrement RSA — cacher des messages secrets
+      dans les pixels d'une image, avec sécurité renforcée.
+    </p>
+    <div class="detail-meta">
+      <div class="meta-item">
+        <label>Contexte</label>
+        <span>Trophées NSI 2025 · Terminale · Équipe de 3</span>
+      </div>
+      <div class="meta-item">
+        <label>Établissement</label>
+        <span>Lycée Simone Weil, Le-Puy-en-Velay</span>
+      </div>
+      <div class="meta-item">
+        <label>Mon rôle</label>
+        <span>UI/UX · Optimisation des algorithmes</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-body">
+
+    <h2>Le projet</h2>
+    <p>
+      CitrusCrypt est une application Python qui permet de cacher des messages dans les pixels
+      d'une image grâce à la stéganographie. Pour renforcer la sécurité, nous avons intégré
+      le chiffrement RSA, la génération d'images et l'ajout d'un watermark. L'idée est née
+      après un cours de NSI sur la stéganographie — nous avons voulu aller plus loin en
+      combinant discrétion et cryptographie.
+    </p>
+
+    <h2>Démo</h2>
+    <video src="assets/CitrusCrypt/CitrusCrypt.mp4" autoplay loop muted playsinline controls class="visual-full"></video>
+
+    <a href="assets/CitrusCrypt/Picture-Encoder-main.zip" download class="download-btn">↓ Télécharger les sources (ZIP)</a>
+
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">×</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+  </div>
+
+  <a href="assets/CV-Elias-El-Mkademi.pdf" download class="cv-fab">↓ CV</a>
+
+  <footer>
+    <span>© 2026 Elias El Mkademi</span>
+    <span><a href="mailto:eelmkademi@gmail.com">eelmkademi@gmail.com</a></span>
+  </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.visual-item, .visual-full').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+
+  <script src="main.js"></script>
+</body>
+</html>

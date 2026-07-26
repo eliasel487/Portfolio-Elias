@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos — Elias El Mkademi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cv.css" />
+  <link rel="icon" href="assets/logo.ico" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">E.E</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="cv.html" class="active">À propos</a></li>
+      <li><a href="realisations.html">Réalisations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-top">
+    <p class="section-label">À propos</p>
+    <h1 class="page-heading">Elias El Mkademi</h1>
+    <p class="about-subtitle">Étudiant BUT Informatique · IUT Clermont Auvergne</p>
+
+    <div class="about-grid">
+
+      <div class="code-window">
+        <div class="code-window-bar">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="code-window-title">about_me.c</span>
+        </div>
+        <pre class="code-content"><code><span class="c-comment">// about_me.c</span>
+
+<span class="c-kw">#include</span> <span class="c-str">&lt;stdio.h&gt;</span>
+
+<span class="c-kw">typedef struct</span> {
+    <span class="c-kw">char</span> *name;
+    <span class="c-kw">char</span> *degree;
+    <span class="c-kw">char</span> *year;
+    <span class="c-kw">char</span> *passion[<span class="c-num">3</span>];
+} Elias;
+
+<span class="c-kw">char</span> *bonjour() {
+    <span class="c-kw">return</span> <span class="c-str">"Bienvenue !"</span>;
+}
+
+Elias moi = {
+    .name   = <span class="c-str">"El Mkademi Elias"</span>,
+    .degree = <span class="c-str">"BUT Informatique"</span>,
+    .year   = <span class="c-str">"1ère année"</span>,
+    .passion = {
+        <span class="c-str">"Dev &amp; Design"</span>,
+        <span class="c-str">"Mode"</span>,
+        <span class="c-str">"Entrepreneuriat"</span>
+    }
+};</code></pre>
+      </div>
+
+      <div class="about-body">
+
+        <p class="about-bio">
+          Je m'appelle <strong>Elias</strong>, étudiant en <strong>BUT Informatique</strong>
+          à Aubière. Je développe mes compétences en programmation et en gestion de projets numériques.
+        </p>
+
+        <div class="about-blocks">
+          <div class="about-block">
+            <h3>Parcours scolaire</h3>
+            <p>Avant le BUT, j'ai suivi un bac général au <strong>Lycée Simone Weil du Puy-en-Velay</strong> avec les spécialités <strong>Maths</strong> et <strong>NSI</strong>, ce qui a renforcé mon intérêt pour l'informatique. Au sein du BUT, j'ai réalisé plusieurs projets pour développer mes compétences en développement et en gestion de projets.</p>
+            <a href="realisations.html" class="btn btn-primary" style="margin-top:0.75rem;display:inline-block;">Voir mes réalisations</a>
+          </div>
+          <div class="about-block">
+            <h3>Objectifs professionnels</h3>
+            <p>Je souhaite travailler dans le développement logiciel et le web, avec l'envie d'innover et de résoudre des problèmes. Je suis également à la recherche d'une <strong>alternance</strong> dans le cadre de mon parcours BUT Informatique. Si mon profil vous intéresse, n'hésitez pas à me contacter !</p>
+            <a href="contact.html" class="btn btn-primary" style="margin-top:0.75rem;display:inline-block;">Me contacter</a>
+          </div>
+          <div class="about-block">
+            <h3>Centres d'intérêt</h3>
+            <p>En dehors des études, je m'intéresse aux nouvelles technologies, aux projets personnels en programmation et je design de nombreuses choses — comme ma marque de vêtements <a href="tozka.html">Tozka</a>.</p>
+          </div>
+        </div>
+
+        <div class="cv-download-block">
+          <div>
+            <strong>Mon CV complet</strong>
+            <p>Formation, expériences et compétences en PDF.</p>
+          </div>
+          <a href="assets/CV-Elias-El-Mkademi.pdf" class="btn btn-primary" download>Télécharger le CV</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <a href="assets/CV-Elias-El-Mkademi.pdf" download class="cv-fab">↓ CV</a>
+
+  <footer>
+    <span>© 2026 Elias El Mkademi</span>
+    <span><a href="mailto:eelmkademi@gmail.com">eelmkademi@gmail.com</a></span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

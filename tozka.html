@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tozka — Projet personnel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="tozka.css" />
+  <link rel="icon" href="assets/logo.ico" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">E.E</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="cv.html">À propos</a></li>
+      <li><a href="realisations.html" class="active">Réalisations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="detail-hero">
+    <a href="realisations.html" class="back-link">← Retour aux réalisations</a>
+    <p class="section-label">Projet personnel · Mode</p>
+    <h1>Tozka</h1>
+    <p>
+      Ma marque de vêtements en cours de création depuis <strong>2024</strong> — identité visuelle forte,
+      inspirée de mes origines et de la culture streetwear.
+    </p>
+    <div class="detail-meta">
+      <div class="meta-item">
+        <label>Statut</label>
+        <span>En cours · 2024 —</span>
+      </div>
+      <div class="meta-item">
+        <label>Domaines</label>
+        <span>Branding · Direction artistique · Mode</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-body tozka-body">
+    <h2>Le projet</h2>
+    <p>
+      Tozka est un projet que je construis depuis 2024, avec l'ambition de lancer une vraie marque de vêtements streetwear.
+      Prochainement, je commencerai un petit produit de test — des t-shirts — pour valider le concept et tester la réception.
+      L'objectif à long terme est de lancer Tozka officiellement et d'en faire une marque à part entière.
+    </p>
+
+    <h2>Visuels</h2>
+    <div class="tozka-gallery">
+      <img src="assets/tozka/azul.jpeg"  alt="Tozka — Azul"  class="tozka-photo" />
+      <img src="assets/tozka/rojo.jpeg"  alt="Tozka — Rojo"  class="tozka-photo" />
+      <img src="assets/tozka/maroc.jpeg" alt="Tozka — Maroc" class="tozka-photo tozka-photo--wide" />
+      <img src="assets/tozka/rosa.png"   alt="Tozka — Rosa"  class="tozka-photo" />
+      <img src="assets/tozka/8EA0D4C2-B2A7-499A-A895-621259F99897.PNG" alt="Tozka" class="tozka-photo" />
+    </div>
+
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fermer">×</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+  </div>
+
+  <a href="assets/CV-Elias-El-Mkademi.pdf" download class="cv-fab">↓ CV</a>
+
+  <footer>
+    <span>© 2026 Elias El Mkademi</span>
+    <span><a href="mailto:eelmkademi@gmail.com">eelmkademi@gmail.com</a></span>
+  </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.tozka-photo').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+  <script src="main.js"></script>
+</body>
+</html>
