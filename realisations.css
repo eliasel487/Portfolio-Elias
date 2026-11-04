@@ -41,6 +41,10 @@
   .realisations-grid--two {
     grid-template-columns: 1fr;
   }
+
+  .card-body {
+    padding: 1.5rem;
+  }
 }
 
 .card-thumb-empty--tall {

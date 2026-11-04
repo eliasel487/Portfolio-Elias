@@ -83,6 +83,31 @@ nav {
 .nav-links a:hover,
 .nav-links a.active { color: var(--accent); opacity: 1; }
 
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  margin-right: -.6rem;
+  padding: .6rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 1px;
+  background: var(--white);
+  transition: transform .2s, opacity .2s;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ── HERO ── */
 .hero {
   min-height: 100vh;
@@ -668,11 +693,38 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  nav { padding: 1rem 1.5rem; }
-  .nav-links { gap: 1.2rem; }
-  .nav-links a { font-size: .72rem; }
+  nav { padding: .5rem 1.5rem; }
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: .5rem 1.5rem 1rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a {
+    display: block;
+    padding: .8rem 0;
+    font-size: .85rem;
+  }
 
   section, .hero, .detail-hero, .detail-body { padding-left: 1.5rem; padding-right: 1.5rem; }
+  section { padding-top: 4rem; padding-bottom: 4rem; }
+  .page-top { padding-top: 6rem; }
+  .detail-hero { padding-top: 5.5rem; }
+  .detail-body { padding-top: 2rem; padding-bottom: 3rem; }
+  .detail-body h2 { margin-top: 2.5rem; }
+  .detail-body p,
+  .detail-body ul li { font-size: 1rem; }
+  .page-lead { margin-bottom: 2.5rem; }
+  .section-label.mt { margin-top: 4rem; }
 
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
   .realisations-grid { grid-template-columns: 1fr; }
@@ -680,4 +732,19 @@ footer {
   .skills-grid { grid-template-columns: 1fr; }
   footer { flex-direction: column; gap: 1rem; text-align: center; }
   .hero-scroll { left: 1.5rem; }
+
+  .cv-fab {
+    bottom: 1rem;
+    right: 1rem;
+    max-width: calc(100vw - 2rem);
+    padding: .5rem .9rem;
+    font-size: .7rem;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .25rem;
+  }
+  .contact-item .ci-value { overflow-wrap: anywhere; }
 }

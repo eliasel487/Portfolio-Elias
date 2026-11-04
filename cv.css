@@ -197,6 +197,21 @@
   .cv-download-block {
     flex-direction: column;
     align-items: flex-start;
+    padding: 1.5rem;
+  }
+
+  .code-content {
+    padding: 1rem 1.2rem;
+    font-size: .74rem;
+  }
+
+  .about-bio,
+  .about-block p {
+    font-size: 1rem;
+  }
+
+  .about-block h3 {
+    font-size: 1.5rem;
   }
 }
 

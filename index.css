@@ -28,8 +28,12 @@
 @media (max-width: 768px) {
   .hero {
     grid-template-columns: 1fr;
-    grid-template-rows: 60vw 1fr;
+    grid-template-rows: auto 1fr;
   }
-  .hero-photo { order: -1; }
+  .hero-photo {
+    order: -1;
+    height: min(110vw, 52vh);
+  }
+  .hero-photo img { object-position: center 62%; }
   .hero-content { padding: 2rem 1.5rem 3rem; }
 }

@@ -43,6 +43,17 @@ video.visual-full {
   .visuels-grid {
     grid-template-columns: 1fr;
   }
+
+  .visual-item {
+    height: auto;
+    aspect-ratio: auto;
+  }
+
+  video.visual-full {
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
 }
 
 /* ── LIGHTBOX ── */
