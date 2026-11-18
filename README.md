@@ -1,6 +1,6 @@
 # Portfolio — Elias El Mkademi
 
-Portfolio personnel d'Elias El Mkademi, étudiant en BUT Informatique à l'IUT Clermont Auvergne.
+Portfolio personnel d'Elias El Mkademi, étudiant en BUT Informatique à l'IUT Lyon 1 (La Doua, Villeurbanne).
 
 > Développeur en formation, curieux de tout — du code au design.
 
